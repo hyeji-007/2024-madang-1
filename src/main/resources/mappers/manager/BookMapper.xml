@@ -14,9 +14,9 @@
 
     <select id="selBookList">
         SELECT bookid AS bookId
-        , bookname AS bookName
-        , publisher
-        , price
+             , bookname AS bookName
+             , publisher
+             , price
         FROM book
         <if test=" searchText != null and searchText != '' ">
             WHERE bookname LIKE '%${searchText}%'
