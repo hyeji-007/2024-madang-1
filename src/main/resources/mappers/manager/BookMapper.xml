@@ -8,8 +8,8 @@
     <insert id="insBook">
         INSERT INTO book
         SET bookname = #{bookName}
-        , publisher = #{publisher}
-        , price = #{price}
+          , publisher = #{publisher}
+          , price = #{price}
     </insert>
 
     <select id="selBookList">
@@ -34,7 +34,7 @@
         UPDATE book
         <set>
             <if test=" bookName != null and bookName != '' ">
-                bookname = #{bookName}
+                  bookname = #{bookName}
             </if>
             <if test=" publisher != null and publisher != '' ">
                 , publisher = #{publisher}

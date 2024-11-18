@@ -7,7 +7,7 @@ spring:
     username: root
     password: green502
 
-# ??? ???.
+# 주석은 똑같다.
 mybatis:
   mapper-locations: mappers/**/*.xml
 
@@ -17,6 +17,7 @@ springdoc:
     display-request-duration: true
     operations-sorter: method
     path: /swagger
+
 
 
 
