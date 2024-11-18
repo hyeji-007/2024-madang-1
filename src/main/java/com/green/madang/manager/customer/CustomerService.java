@@ -18,8 +18,10 @@ public class CustomerService {
     public List<CustomerGetRes> getCustomerList(CustomerGetReq p) {
         //page 로직 처리 >> startIdx 값 세팅
         //(page - 1) * size;
-        int startIdx = (p.getPage() - 1) * p.getSize();
-        p.setStartIdx(startIdx);
+//        int startIdx = (p.getPage() - 1) * p.getSize();
+//        p.setStartIdx(startIdx);
+
+        //CustomerGetReq는 immutable 객체로 만들었기 때문에 객체 안에서 startIdx값을 계산하였음.
         return mapper.selCustomerList(p);
     }
 
@@ -27,7 +29,7 @@ public class CustomerService {
         return mapper.updCustomer(p);
     }
 
-    public int deleteCustomer(CustomerDeleteReq p) {
-        return mapper.delCustomer(p);
+    public int deleteCustomer(CustomerDeleteReq custId) {
+        return mapper.delCustomer(custId);
     }
 }
