@@ -12,7 +12,7 @@
     </insert>
 
     <select id="selCustomerList">
-        SELECT custid, name, address, phone
+        SELECT custid AS custId, name, address, phone
         FROM customer
         <choose>
             <when test="searchType != null and searchType != ''

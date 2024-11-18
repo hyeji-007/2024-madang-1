@@ -49,7 +49,6 @@ public class CustomerController {
         return new MyResponse<>(p.getPage() + "페이지 데이터", res);
     }
 
-
     @PutMapping
     @Operation(summary = "고객 수정", description = "부분 수정 가능합니다.")
     public MyResponse<Integer> putCustomer(@RequestBody CustomerPutReq p) {
