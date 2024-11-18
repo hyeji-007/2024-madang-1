@@ -13,8 +13,7 @@ mybatis:
 
 springdoc:
   swagger-ui:
-    default-model-expand-depth: 2
-    default-models-expand-depth: -1
+    default-model-expand-depth: 10
     display-request-duration: true
     operations-sorter: method
     path: /swagger
