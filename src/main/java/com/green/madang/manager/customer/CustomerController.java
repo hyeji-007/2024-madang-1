@@ -58,9 +58,17 @@ public class CustomerController {
 
     @DeleteMapping
     @Operation(summary = "고객 삭제")
-    public MyResponse<Integer> deleteCustomer(@ParameterObject @ModelAttribute CustomerDeleteReq custId) {
+    public MyResponse<Integer> deleteCustomer(@RequestParam(value = "cust_id") int custId) {
         log.info("custId: {}", custId);
-        return new MyResponse<>(custId.getCustId() + "번 고객을 삭제하였습니다."
-                 , service.deleteCustomer(custId));
+        int result = service.deleteCustomer(custId);
+        return new MyResponse<>(custId + "번 고객을 삭제하였습니다.", result);
     }
+
+//    @DeleteMapping
+//    @Operation(summary = "고객 삭제")
+//    public MyResponse<Integer> deleteCustomer(@ParameterObject @ModelAttribute CustomerDeleteReq custId) {
+//        log.info("custId: {}", custId);
+//        return new MyResponse<>(custId.getCustId() + "번 고객을 삭제하였습니다."
+//                 , service.deleteCustomer(custId));
+//    }
 }

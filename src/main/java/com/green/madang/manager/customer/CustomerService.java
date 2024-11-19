@@ -29,7 +29,7 @@ public class CustomerService {
         return mapper.updCustomer(p);
     }
 
-    public int deleteCustomer(CustomerDeleteReq custId) {
+    public int deleteCustomer(int custId) {
         return mapper.delCustomer(custId);
     }
 }

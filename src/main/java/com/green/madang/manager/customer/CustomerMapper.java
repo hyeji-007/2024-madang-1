@@ -10,5 +10,5 @@ public interface CustomerMapper {
     int insCustomer(CustomerPostReq p);
     List<CustomerGetRes> selCustomerList(CustomerGetReq p);
     int updCustomer(CustomerPutReq p);
-    int delCustomer(CustomerDeleteReq p);
+    int delCustomer(int p);
 }
