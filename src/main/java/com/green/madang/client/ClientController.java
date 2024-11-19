@@ -3,7 +3,7 @@ package com.green.madang.client;
 import com.green.madang.client.model.OrderGetReq;
 import com.green.madang.client.model.OrderGetRes;
 import com.green.madang.client.model.OrderPostReq;
-import com.green.madang.common.model.MyResponse;
+import com.green.madang.common.model.*;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
@@ -26,7 +26,7 @@ public class ClientController {
     @Operation(summary = "책 주문")
     public MyResponse<Integer> postOrder(@RequestBody OrderPostReq p) {
         int result = service.postOrder(p);
-        return new MyResponse<>("주문이 등록되었습니다.", result);
+        return new MyResponse<>(p.getOrderId() + "번 주문이 등록되었습니다.", result);
     }
 
     //본인이 주문한 책 리스트

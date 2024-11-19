@@ -3,7 +3,7 @@
 
 <mapper namespace="com.green.madang.client.ClientMapper">
 
-    <insert id="insOrders">
+    <insert id="insOrders" useGeneratedKeys="true" keyProperty="orderId">
         INSERT INTO orders
         (custid, bookid, saleprice, orderdate)
         SELECT #{custId}, bookid, price, current_date
