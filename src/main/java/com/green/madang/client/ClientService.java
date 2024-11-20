@@ -16,7 +16,10 @@ public class ClientService {
     private final ClientMapper mapper;
 
     public int postOrder(OrderPostReq p) {
-        return mapper.insOrders(p);
+        log.info("OrderPostReq - before call: {}", p);
+        int r = mapper.insOrders(p);
+        log.info("OrderPostReq - after call: {}", p);
+        return r;
     }
 
     public List<OrderGetRes> getOrderList(OrderGetReq p) {

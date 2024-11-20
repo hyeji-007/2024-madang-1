@@ -31,7 +31,7 @@
         UPDATE customer
         <set>
             <if test=" name != null and name != '' ">
-                  name = #{name}
+                name = #{name}
             </if>
             <if test=" address != null and address != '' ">
                 , address = #{address}
@@ -47,4 +47,5 @@
         DELETE FROM customer
         WHERE custid = #{custId}
     </delete>
+
 </mapper>
