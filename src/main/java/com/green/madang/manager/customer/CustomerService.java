@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-@RequiredArgsConstructor
+@RequiredArgsConstructor //final 멤버 필드의 생성자 자동 생성
 public class CustomerService {
     private final CustomerMapper mapper;
 
